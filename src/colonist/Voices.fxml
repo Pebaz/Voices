@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<VBox fx:id="AppWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="345.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="colonist.Controller">
+   <children>
+      <TextArea fx:id="voices" disable="true" prefHeight="481.0" prefWidth="345.0" VBox.vgrow="ALWAYS" />
+      <HBox alignment="CENTER" prefHeight="36.0" prefWidth="345.0" VBox.vgrow="ALWAYS">
+          <children>
+              <ChoiceBox fx:id="people" HBox.hgrow="ALWAYS">
+                  <padding>
+                      <Insets left="8.0" right="8.0" />
+                  </padding>
+                  <HBox.margin>
+                      <Insets left="8.0" right="8.0"/>
+                  </HBox.margin>
+              </ChoiceBox>
+              <TextField fx:id="voiceEnter" promptText="Person:Your message" HBox.hgrow="ALWAYS" onKeyReleased="#choosePerson">
+                <padding>
+                   <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+                <HBox.margin>
+                   <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+            </TextField>
+            <Button mnemonicParsing="false" defaultButton="true" onAction="#addtext" prefHeight="33.0" prefWidth="70.0" text="Send" HBox.hgrow="SOMETIMES">
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>
